@@ -11,6 +11,7 @@ public class getAPI {
         // Создаем http клиент
         try (final CloseableHttpClient httpclient = HttpClients.createDefault()) {
             final HttpGet httpGet = new HttpGet(uri);
+            httpGet.addHeader("Content-Type", "application/json");
             try (final CloseableHttpResponse response1 = httpclient.execute(httpGet)) {
                 System.out.print(httpGet.getMethod()+" ");
                 System.out.println(response1.getVersion()+response1.getReasonPhrase());
