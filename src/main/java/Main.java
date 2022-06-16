@@ -1,9 +1,18 @@
+import user.User;
 
+import java.sql.SQLException;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-        Mathematic mmm = new Mathematic();
-        int result = mmm.sum(1,2,3,4,5,6);
-        System.out.println(result);
+    public static void main(String[] args) throws SQLException {
+      sqlQuery.getColumnName("person");
+        List<User> a = sqlQuery.sqlQuery("SELECT * FROM person");
+        System.out.println(a);
+//        for (User us :a){
+//            System.out.println(us);
+//        }
+        sqlQuery.getTables();
+
+
     }
 }
